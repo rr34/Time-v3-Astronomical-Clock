@@ -1,0 +1,208 @@
+#:kivy 1.11.0
+
+FloatLayout:
+
+    # layout variables
+    buttons_size: 90,40
+    buttons_background_color: (0.0,0.0,0.0,1.0)
+    font_size: 25
+    text_color: (0/255,0/255,0/255,1)
+    text_outline_color: (255/255,255/255,255/255)
+    text_outline_width: 2
+    moon_angle: 0.0
+
+
+    BackGroundSky:
+        id: background_sky
+        size: root.size
+
+    # Alnilam:
+    #     id: alnilam
+    #     source: './images/'+'stars 60px.png'
+    #     size_hint: None, None
+
+    Neptune:
+        id: neptune
+        source: './images/'+'neptune hubble.png'
+        size_hint: None, None
+        # pos: (0,0)
+    
+    Uranus:
+        id: uranus
+        source: './images/'+'uranus hubble.png'
+        size_hint: None, None
+        # pos: (0,0)
+    
+    Saturn:
+        id: saturn
+        source: './images/'+'saturn w rings hubble.png'
+        size_hint: None, None
+        # pos: (0,0)
+    
+    Jupiter:
+        id: jupiter
+        source: './images/'+'jupiter wikipedia hubble.png'
+        size_hint: None, None
+        # pos: (0,0)
+    
+    Mars:
+        id: mars
+        source: './images/'+'mars hubble.png'
+        size_hint: None, None
+        # pos: (0,0)
+    
+    Venus:
+        id: venus
+        source: './images/'+'venus from internet.png'
+        size_hint: None, None
+        # pos: (0,0)
+    
+    Mercury:
+        id: mercury
+        source: './images/'+'mercury hubble.png'
+        size_hint: None, None
+        # pos: (0,0)
+
+    Sun:
+        id: sun
+        source: './images/'+'sun yellow orange 148.png'
+        size_hint: None, None
+        # pos: (0,0)
+    
+    Moon:
+        id: moon_image
+        source: './images/'+'moon 00 new.png'
+        canvas.before:
+            PushMatrix
+            Rotate:
+                angle: root.moon_angle
+                axis: 0, 0, 1
+                origin: self.center
+        canvas.after:
+            PopMatrix
+        size_hint: None, None
+        # pos: (0,0)
+
+    ForeGroundImg:
+        id: foreground
+        size: root.size
+
+    BoxLayout:
+        orientation: 'horizontal'
+    
+        Button:
+            id: day_lapse_button
+            text: 'Day Lapse'
+            # pos: (20,20)
+            size: root.buttons_size
+            size_hint: None, None
+            background_color: root.buttons_background_color
+            on_release:
+                app.show_day_lapse()
+        Button:
+            text: 'Week Lapse'
+            # pos: (140,20)
+            size: root.buttons_size
+            size_hint: None, None
+            background_color: root.buttons_background_color
+        Button:
+            text: 'Month Lapse'
+            # pos: (380,20)
+            size: root.buttons_size
+            size_hint: None, None
+            background_color: root.buttons_background_color
+        Button:
+            text: 'Year Lapse'
+            # pos: (380,20)
+            size: root.buttons_size
+            size_hint: None, None
+            background_color: root.buttons_background_color
+
+    BoxLayout:
+        orientation: 'vertical'
+        background_color: (255/255,255/255,255/255,1)
+        size: 1000,200
+        size_hint: None, None
+        # size_hint: (0.2,0.2)
+        pos: (10,60)
+
+        # Label:
+        #     id: coding_info
+        #     # text properties
+        #     text_size: self.size
+        #     halign: 'left' # has to be AFTER text_size for some reason
+        #     bold: True
+        #     color: root.text_color
+        #     outline_color: root.text_outline_color
+        #     outline_width: root.text_outline_width
+        #     text: 'coding info'
+        Label:
+            id: sun_azalt
+            # text properties
+            text_size: self.size
+            halign: 'left' # has to be AFTER text_size for some reason
+            bold: True
+            color: root.text_color
+            outline_color: root.text_outline_color
+            outline_width: root.text_outline_width
+            text: 'sun azalt'
+        Label:
+            id: sun_daily_events
+            # text properties
+            text_size: self.size
+            halign: 'left' # has to be AFTER text_size for some reason
+            bold: True
+            color: root.text_color
+            outline_color: root.text_outline_color
+            outline_width: root.text_outline_width
+            text: 'sun daily events'
+        Label:
+            id: day_length
+            # text properties
+            text_size: self.size
+            halign: 'left' # has to be AFTER text_size for some reason
+            bold: True
+            color: root.text_color
+            outline_color: root.text_outline_color
+            outline_width: root.text_outline_width
+            text: 'day length'
+        Label:
+            id: moon_azalt
+            # text properties
+            text_size: self.size
+            halign: 'left' # has to be AFTER text_size for some reason
+            bold: True
+            color: root.text_color
+            outline_color: root.text_outline_color
+            outline_width: root.text_outline_width
+            text: 'moon azalt'
+        Label:
+            id: moon_phase
+            # text properties
+            text_size: self.size
+            halign: 'left' # has to be AFTER text_size for some reason
+            bold: True
+            color: root.text_color
+            outline_color: root.text_outline_color
+            outline_width: root.text_outline_width
+            text: 'moon phase'
+        Label:
+            id: moon_daily_events
+            # text properties
+            text_size: self.size
+            halign: 'left' # has to be AFTER text_size for some reason
+            bold: True
+            color: root.text_color
+            outline_color: root.text_outline_color
+            outline_width: root.text_outline_width
+            text: 'moon daily events'
+        Label:
+            id: industrial_time
+            # text properties
+            text_size: self.size
+            halign: 'left' # has to be AFTER text_size for some reason
+            bold: True
+            color: root.text_color
+            outline_color: root.text_outline_color
+            outline_width: root.text_outline_width
+            text: 'industrial time'

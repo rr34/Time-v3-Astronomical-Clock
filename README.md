@@ -6,19 +6,19 @@ The Time v3 Astronomical Clock is a practical application of the [AstroWideImage
 ## Images from the Clock
 The following images are from around our house displayed on the clock. If I look at the clock inside my house, then step outside, I see the celestial objects where they are in the photo.
 
-The images are PNG with the sky photoshopped to transparency and a background single-color sky image as the bottom layer. Notice the dark purple color of the sky in this photo with the sun 4° below the horizon. The sky changes color based on the angle of the sun below the horizon, with bright blue during the day and black when darker than astronomical twightlight.
+The images are PNG with the sky photoshopped to transparency and a background single-color sky image as the bottom layer. Notice the dark purple color of the sky in this photo with the sun (not visible) 4° below the horizon (sun location information shown in bottom left corner). The sky changes color based on the angle of the sun below the horizon, with bright blue during the day, several transition colors, then black when darker than astronomical twightlight.  
 ![demo 3](readme-images/demo-3.jpg)
 
-The phase of the moon is correct, *including* the direction the bright side of the moon appears in the sky. The planets are correctly placed on the clock for the time shown. The planets are lined up in a plane with the sun because in real life the planets orbit in nearly the same plane. Currently, all 7 other planets happen to nearly fit in a single image at the same time.
+The phase of the moon is correct, *including* the direction the bright side of the moon appears in the sky. The planets are correctly placed on the clock for the time shown. The planets are lined up in a plane with the sun because in real life the planets orbit in nearly the same plane. Currently, all 7 other planets happen to nearly fit in a single image at the same time.  
 ![demo 2](readme-images/demo-2.jpg)
 
-Notice the sun and planets appear realistically behind the tree branches, but with just enough of an "animation look" to show it is a computer representation.
+Notice the sun and planets appear realistically behind the tree branches, but with just enough of an "animation look" to show it is a computer representation.  
 ![demo 1](readme-images/demo-1.jpg)
 
-The sun sets over the alley behind our house in its correct northwest position.
+The sun sets over the alley behind our house in its correct northwest position.  
 ![demo 4](readme-images/demo-4.jpg)
 
-The information in the corner is based entirely on actual celestial events, with the one exception being the bottom line that displays local "industrial time" and date.
+The information in the corner is based entirely on actual celestial events, with the one exception being the bottom line that displays local "industrial time" and date.  
 ![demo 5](readme-images/demo-5.jpg)
 
 ## TODO

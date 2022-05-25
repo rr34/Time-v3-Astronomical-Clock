@@ -17,19 +17,6 @@ import clockmath
 import astroimage
 import time # to time code
 
-# TODO correct time now losing time.
-# TODO need enough daily events for the whole 24-hour period
-# TODO add moon phase
-# TODO implement "is on image" function better 1. on image is anytime < 255 opacity 2. image bounds with border inside edges 3. still favor big blur partial covered 4. show sunrise sunset location during civil twighlight
-# TODO post-industrial clock by Time v3 Technology Delaware, Ohio
-
-# TODO make smooth animations
-# TODO pytz on raspberry pi
-# TODO change text of buttons while calculating
-# TODO follow moon and stars at night not sun
-# TODO add stars
-# TODO gradually change the color of the sky
-
 class BackGroundSky(Image):
     pass
 
@@ -228,7 +215,7 @@ class Timev3AstroClockApp(App):
 
     def show_day_lapse(self):
         self.tick_schedule.cancel()
-        tick_time = 1.5
+        tick_time = 0.6
         lapse_speed = self.now_resolution / tick_time
         print('lapse speed is %.2f' % (lapse_speed))
         self.show_timev3_clock('lapse from beginning', tick_time)

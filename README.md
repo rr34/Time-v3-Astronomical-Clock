@@ -1,5 +1,5 @@
 # Astronomical Clock by Time v3 Technology
-The Time v3 Technology astronomical clock is designed to be the most user-friendly astronomical clock in history. By using photographs digitally marked with astronomical data, the clock places the sun, moon, and stars on familiar photos in real time.
+The Time v3 Technology astronomical clock is designed to be the most user-friendly astronomical clock in history. By using photographs tagged with astronomical data, the clock places the sun, moon, and stars on familiar photos in real time.
 
 The Time v3 Astronomical Clock is a practical application of the [AstroWideImageMapper project](https://github.com/rr34/AstroWideImageMapper).
 

@@ -62,8 +62,8 @@ class AstroImage(object):
         az_rel = np.where(np.abs(simple_subtract) <= 180, simple_subtract, np.add(simple_subtract, big_angle_correction))
         az_rel_direction = np.where(az_rel < 0, -1, 1)
         az_rel_abs = np.abs(az_rel)
-        az_rel_behind_observer = np.where(az_rel_abs <= 90, False, True) # true if point is behind observer - assume because camera pointed up very high past zenith or below nether-zenith
-        # Note: cannot allow az_rel_compliment (and therefore d2) to be negative because must simple_ang_totalsmallcircle (-) if alt_seg_ is (-), which is good.
+        az_rel_behind_observer = np.where(az_rel_abs <= 90, False, True) # true if point is behind observer - assume because camera pointed up very high past zenith or pointed very low below nether-zenith
+        # Note: cannot allow az_rel_compliment (and therefore d2) to be negative because must simple_ang_totalsmallcircle be (-) if alt_seg_ is (-), which is good.
         az_rel_compliment = np.where(az_rel_abs <= 90, np.subtract(90, az_rel_abs), np.subtract(az_rel_abs, 90)) # 0 to 90 angle from line perpendicular to az
         az_rel_compliment_rad = np.multiply(az_rel_compliment, math.pi/180) # (+) only, 0 to 90
         center_azalt_rad = np.multiply(self.center_azalt, math.pi/180)
@@ -72,7 +72,7 @@ class AstroImage(object):
         alt_direction = np.where(azalts[:,1] < 0, -1, 1)
         alt_rad = np.multiply(azalts[:,1], math.pi/180)
 
-        # trigonometry, see photoshop diagrams for variable descriptions. segment ending with underscore_ means can be "negative distance"
+        # trigonometry, see photoshop diagrams for variable descriptions. segment ending with underscore_ means "can be negative distance"
         alt_seg_ = np.sin(alt_rad) # notice: (-) for (-) alts
         d3 = np.cos(alt_rad) # (+) only, because alts are always -90 to 90
         d2 = np.multiply(np.sin(az_rel_compliment_rad), d3) # (+) only
